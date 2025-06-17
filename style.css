@@ -1,0 +1,109 @@
+/* Background animation */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #fbc2eb, #f9d423);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Main card */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 370px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #000;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 25px;
+  color: #111;
+}
+
+/* Timer */
+.time-display {
+  font-size: 42px;
+  font-weight: bold;
+  color: #222;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 18px 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.05),
+              inset -6px -6px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.start { background-color: #007bff; }
+.stop { background-color: #ff9800; }
+.reset { background-color: #28a745; }
+.lap { background-color: #6f42c1; }
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Laps section */
+.laps {
+  text-align: left;
+  background: rgba(240, 240, 240, 0.85);
+  padding: 15px 20px;
+  border-radius: 15px;
+  max-height: 150px;
+  overflow-y: auto;
+  color: #222;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+.laps h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.laps ul {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.laps li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444;
+}
